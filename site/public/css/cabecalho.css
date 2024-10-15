@@ -63,7 +63,7 @@
 .container_cabecalho {
     display: flex;
     flex-direction: row;
-    background: var(--azulclaro);
+    background: var(--preto2);
     align-items: center;
 }
 .itens_cabecalho{
