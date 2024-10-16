@@ -28,7 +28,7 @@
     }
     .logo_cabecalho{
         margin: 1vh 1vh 1vh 2vh;
-        height:15vw;
+        height:10vw;
     }
     .btn_cabecalho{
         width: 20vw;
@@ -73,7 +73,7 @@
     display: flex;
     flex-direction: row;
     width: 30%;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 a {
     color: currentColor;
@@ -81,25 +81,25 @@ a {
 }
 .logo_cabecalho{
     margin: 1vh 1vh 1vh 6vh;
-    height: 10vh;
+    height: 6vh;
 }
 .btn_cabecalho{
+    font-weight: bold;
     /* width: 10vw; */
-    padding: 0.8vw;
+    padding: 0.4vw;
     /* height: 5vh; */
-    border-radius: 30px;
-    background-color: var(--preto2);
+    border-radius: 10px;
+    background-color: var(--transparent);
     color: var(--branco);
-    font-size: 1.7rem;
+    font-size: 1rem;
     border-color: transparent;
     font-family: var(--letra);
     text-align: center;
     transition: 0.3s;
 }
 .btn_cabecalho:hover{
-    font-size: 1.8rem;
-    background-color: var(--preto2);
-    color: var(--branco);
+    background-color: var(--branco);
+    color: var(--preto2);
     cursor: pointer;
 }
 
