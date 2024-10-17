@@ -51,57 +51,71 @@
 }
 
 /* Computador */
+@media screen and (min-width: 500px) {
+    .cabecalho {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--branco);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para o cabeçalho */
+        z-index: 1000;
+        opacity: 1; /* Começa visível */
+        transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transição suave */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 
-@media screen and (min-width: 500px){
-.cabecalho{
-    top:0;
-    left: 0;
-    position: fixed;
-    width: 100%;
+    .cabecalho.hidden {
+        top: -100px; /* Esconde o cabeçalho movendo-o para fora da tela */
+        opacity: 0; /* Faz o cabeçalho desaparecer */
+    }
+
+    .container_cabecalho {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vh 5vw;
+        width: 40%;
+    }
+
+    .logo_cabecalho {
+        height: 5vh;
+    }
+
+    .itens_cabecalho {
+        display: flex;
+        justify-content: space-evenly;
+        flex: 1;
+    }
+
+    .btn_cabecalho {
+        font-weight: bold;
+        padding: 0.4vw 1vw;
+        border-radius: 10px;
+        background-color: var(--transparent);
+        color: var(--preto2);
+        font-size: 1rem;
+        border: 2px solid transparent;
+        font-family: var(--letra);
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn_cabecalho:hover {
+        background-color: var(--azulmedio);
+        color: var(--branco);
+        cursor: pointer;
+        border-color: var(--azulmedio);
+    }
+
+    a {
+        color: currentColor;
+        text-decoration: none;
+    }
 }
 
-.container_cabecalho {
-    display: flex;
-    flex-direction: row;
-    background: var(--preto2);
-    align-items: center;
-}
-.itens_cabecalho{
-    margin-right: 3vw;
-    position: fixed;
-    left: 70%;
-    display: flex;
-    flex-direction: row;
-    width: 30%;
-    justify-content: space-evenly;
-}
-a {
-    color: currentColor;
-    text-decoration:none;
-}
-.logo_cabecalho{
-    margin: 1vh 1vh 1vh 6vh;
-    height: 6vh;
-}
-.btn_cabecalho{
-    font-weight: bold;
-    /* width: 10vw; */
-    padding: 0.4vw;
-    /* height: 5vh; */
-    border-radius: 10px;
-    background-color: var(--transparent);
-    color: var(--branco);
-    font-size: 1rem;
-    border-color: transparent;
-    font-family: var(--letra);
-    text-align: center;
-    transition: 0.3s;
-}
-.btn_cabecalho:hover{
-    background-color: var(--branco);
-    color: var(--preto2);
-    cursor: pointer;
-}
 
-}
 

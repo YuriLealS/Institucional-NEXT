@@ -11,7 +11,7 @@
     }
     
     .texto_rodape{
-        font-family: var(--letra);
+        font-family: var(--fonte);
         font-size: 3vw;
         text-align: center;
     }
@@ -25,6 +25,7 @@
         font-weight: bold;
         margin-top: 1vh;
         margin-bottom: 1.5vh;
+        font-family: var(--fonte-titulo);
     }
     
     .texto_rodape_index{
@@ -66,6 +67,7 @@
         text-align: center;
         margin-bottom: 0.5vh;
         color: var(--branco);
+        font-family: var(--fonte-titulo);
     }
 
     .texto_rodape_index{
