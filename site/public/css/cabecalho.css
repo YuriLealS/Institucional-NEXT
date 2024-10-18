@@ -1,56 +1,4 @@
-/* mobile */
-
-@media screen and (max-width:500px){
-    .cabecalho{
-        top:0;
-        left: 0;
-        position: fixed;
-        width: 100%;
-    }
-    
-    .container_cabecalho {
-        display: flex;
-        flex-direction: row;
-        background: var(--azulclaro);
-        align-items: center;
-    }
-    .itens_cabecalho{
-        position: fixed;
-        left: 35%;
-        display: flex;
-        flex-direction: row;
-        width: 60%;
-        justify-content: space-evenly;
-    }
-    a {
-        color: currentColor;
-        text-decoration:none;
-    }
-    .logo_cabecalho{
-        margin: 1vh 1vh 1vh 2vh;
-        height:10vw;
-    }
-    .btn_cabecalho{
-        width: 20vw;
-        height: 10vw;
-        border-radius: 10vw;
-        background-color: var(--preto2);
-        color: var(--branco);
-        font-size: 1rem;
-        font-weight: bold;
-        border-color: var(--preto);
-        font-family: var(--letra);
-        text-align: center;
-        margin-right: 1vw;
-    }
-    .btn_cabecalho:hover{
-        background-color: var(--branco);
-        color: var(--preto2);
-        cursor: pointer;
-    }
-}
-
-/* Computador */
+/* Computador (maiores que 500px) */
 @media screen and (min-width: 500px) {
     .cabecalho {
         position: fixed;
@@ -66,6 +14,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        padding: 1rem 0; /* Pequeno espaçamento vertical */
     }
 
     .cabecalho.hidden {
@@ -117,5 +66,75 @@
     }
 }
 
+/* Tablets (máximo 768px e mínimo 500px) */
+@media screen and (max-width: 768px) and (min-width: 500px) {
+    .container_cabecalho {
+        width: 70%; /* Aumenta a largura do cabeçalho para aproveitar o espaço */
+        padding: 1vh 3vw; /* Menos espaçamento lateral */
+    }
 
+    .logo_cabecalho {
+        height: 4vh; /* Reduz o tamanho da logo */
+    }
 
+    .itens_cabecalho {
+        justify-content: space-between; /* Ajuste no alinhamento para economizar espaço */
+    }
+
+    .btn_cabecalho {
+        padding: 0.4vw 0.8vw;
+        font-size: 0.9rem; /* Ajusta o tamanho do botão */
+    }
+}
+
+/* Smartphones (máximo 500px) */
+@media screen and (max-width: 500px) {
+    .container_cabecalho {
+        width: 96%; /* Faz o cabeçalho ocupar quase toda a largura da tela */
+        padding: 3% 2%; /* Reduz ainda mais o espaçamento */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo_cabecalho {
+        height: 4vh; /* Ajusta o tamanho da logo para um tamanho razoável em telas menores */
+    }
+
+    .itens_cabecalho {
+        flex-direction: column; /* Muda a direção dos itens para coluna em telas muito pequenas */
+        align-items: center; /* Alinha os itens ao centro */
+    }
+
+    .btn_cabecalho {
+        padding: 0.4vw 0.6vw; /* Ajusta o tamanho do botão para telas pequenas */
+        font-size: 0.8rem; /* Tamanho reduzido do texto */
+        background-color: transparent;
+        border: 0;
+        color: var(--preto2);
+        font-weight: bold;
+    }
+}
+
+/* Telas menores que 320px, como alguns celulares antigos */
+@media screen and (max-width: 319px) {
+    .container_cabecalho {
+        width: 95%;
+        padding: 1vh 1vw;
+    }
+
+    .logo_cabecalho {
+        height: 3vh; /* Ajusta o tamanho da logo para telas muito pequenas */
+    }
+
+    .itens_cabecalho {
+        flex-direction: column; /* Mantém os itens na coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .btn_cabecalho {
+        padding: 0.4vw 0.4vw; /* Ajusta o botão para não ocupar muito espaço */
+        font-size: 0.7rem; /* Ajuste de fonte para telas menores */
+    }
+}
