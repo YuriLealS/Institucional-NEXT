@@ -59,24 +59,24 @@
 /* Tablets (máximo 768px e mínimo 500px) */
 @media screen and (max-width: 768px) and (min-width: 500px) {
     .rodape {
-        padding: 2vw 5vw; /* Aumenta o espaçamento lateral em tablets */
+        padding: 2vw 5vw; 
     }
 
     .texto_rodape {
-        font-size: 1rem; /* Ajusta o tamanho da fonte */
+        font-size: 1rem; 
     }
 
     #contato {
-        font-size: 1.5rem; /* Ajuste do tamanho da fonte de contato */
+        font-size: 1.5rem; 
     }
 
     .social-container {
-        width: 40%; /* Aumenta a largura dos ícones de contato em tablets */
-        justify-content: space-around; /* Ajusta o espaçamento */
+        width: 40%; 
+        justify-content: space-around; 
     }
 
     .icon-contato {
-        width: 40px; /* Aumenta o tamanho dos ícones */
+        width: 40px; 
     }
 }
 
@@ -84,7 +84,7 @@
 @media screen and (max-width: 500px) {
     .rodape {
         margin-top: 10%;
-        padding: 2vw 4vw; /* Ajuste o espaçamento lateral para ocupar mais a tela */
+        padding: 2vw 4vw; 
         background-color: var(--preto2);
         display: flex;
         flex-direction: column;
@@ -93,19 +93,20 @@
     }
 
     .texto_rodape {
-        font-size: 0.9rem; /* Reduz o tamanho da fonte em telas menores */
+        font-size: 0.9rem; 
         color: var(--branco);
         text-align: center;
     }
 
     #contato {
-        font-size: 1.2rem; /* Ajuste para o tamanho adequado em smartphones */
+        font-size: 1.2rem; 
         color: var(--branco);
         text-align: center;
     }
 
     .social {
-        flex-direction: row; /* Muda os ícones para alinhamento em linha */
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         margin: 2% 0;
@@ -113,38 +114,39 @@
     }
 
     .social-container {
-        width: 100%; /* Aumenta o tamanho dos ícones em smartphones */
-        justify-content: center;
+        width: 40%;
+        justify-content: space-around;
         display: flex;
         flex-direction: row;
     }
 
     .icon-contato {
-        width: 25px; /* Ajuste no tamanho dos ícones para caber melhor na tela */
+        width: 25px;
         margin: 2%;
     }
 
     #email {
-        margin-bottom: 0.5vh; /* Reduz o espaçamento para otimizar o layout */
+        margin-bottom: 0.5vh;
     }
 }
 
 /* Telas menores que 320px, como alguns celulares antigos */
 @media screen and (max-width: 319px) {
     .rodape {
-        padding: 2vw 3vw; /* Ajuste o espaçamento lateral para telas muito pequenas */
+        padding: 2vw 3vw;
         background-color: var(--preto2);
     }
 
     .texto_rodape {
-        font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte */
+        font-size: 0.8rem;
     }
 
     #contato {
-        font-size: 1rem; /* Ajuste da fonte para dispositivos antigos */
+        font-size: 1rem; 
     }
 
     .social {
+        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -152,11 +154,11 @@
     }
 
     .social-container {
-        width: 70%; /* Aumenta o tamanho dos ícones */
-        justify-content: space-between; /* Melhora o espaçamento para dispositivos menores */
+        width: 40%; 
+        justify-content: space-between; 
     }
 
     .icon-contato {
-        width: 20px; /* Ajuste menor dos ícones para caber na tela pequena */
+        width: 20px;
     }
 }

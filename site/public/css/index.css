@@ -1,7 +1,7 @@
 /* Computador (maiores que 500px) */
 @media screen and (min-width: 500px) {
     .main {
-        margin-top: 7%;
+        padding-top: 120px;
     }
 
     .banner {
@@ -21,6 +21,70 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .sobre{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3% 0;
+    }
+
+    .titulo-sobre{
+        width: 600px;
+        line-height: 2rem;
+    }
+
+    .texto-sobre{
+        width: 750px;
+        font-weight: 400;
+        margin-bottom: 3%;
+    }
+
+    .banner-sobre{
+        width: 100%;
+        background-image: url(img/banner2.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .container-banner-sobre{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.548);
+    }
+
+    .texto-botao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fadeIn, #fade-in2{
+        margin-bottom: 0;
+        margin-top: 20%;
+    }
+
+    .btn-sobre{
+        background-color: transparent;
+        border: 0.1px solid #f9f9f948;
+        cursor: pointer;
+        margin-top: 10%;
+        margin-bottom: 25%;
+        color: var(--branco);
+        font-size: var(--font-size-h1);
+        padding: 2%;
+        font-weight: bold;
+        font-family: var(--fonte);
+        border-radius: 5px;
+    }
+
+    .btn-sobre:hover{
+        background-color: rgba(255, 255, 255, 0.336);
     }
 
     .topicos {
@@ -64,8 +128,9 @@
         color: var(--branco);
         margin-top: 10%;
         font-weight: 400;
-        font-size: var(--font-size-h2);
-        margin: 25%;
+        font-size: var(--font-size-h1);
+        font-family: var(--fonte);
+        margin: 30% 10%;
     }
 
     @keyframes fadeInAnimation {
@@ -80,8 +145,24 @@
 
 /* Tablets e dispositivos entre 500px e 768px */
 @media screen and (max-width: 768px) and (min-width: 500px) {
+    .main {
+        padding-top: 100px;
+    }
+
     .banner-container {
         height: 50%;
+    }
+
+    .titulo-sobre{
+        width: 500px;
+        line-height: 2rem;
+        font-size: var(--font-size-h1);
+    }
+
+    .texto-sobre{
+        width: 500px;
+        font-weight: 400;
+        margin-bottom: 3%;
     }
 
     .card {
@@ -102,13 +183,16 @@
 
     .fadeIn {
         width: 100%;
-        font-size: 1.5rem;  /* Ajuste no tamanho da fonte */
+        font-size: 1.2rem;
+        font-family: var(--fonte);
+        font-weight: 400;
     }
 }
 
 /* Smartphones entre 320px e 500px */
 @media screen and (max-width: 500px) {
-    .banner {
+    .main {
+        padding-top: 15px;
     }
 
     .banner-container {
@@ -122,7 +206,7 @@
     }
 
     .topicos {
-        font-size: 1rem; /* Ajuste para telas menores */
+        font-size: 1rem;
         text-align: center;
     }
 
@@ -155,7 +239,7 @@
 
     .fadeIn {
         width: 40%;
-        font-size: 1.2rem; /* Ajuste no tamanho da fonte */
+        font-size: 1.2rem;
         margin: 5%;
         text-align: center;
         color: var(--branco);
@@ -165,18 +249,13 @@
 
 /* Para telas menores que 320px, como alguns celulares antigos */
 @media screen and (max-width: 319px) {
-    .banner {
-        height: 50vh;
-    }
-
+    
     .banner-container {
-        width: 90%;
-        height: 50%;
+        width: 100%;
     }
 
     .card {
         width: 100%;
-        padding: 0.5rem;
     }
 
     .icon {
@@ -185,7 +264,7 @@
     }
 
     .fadeIn {
-        font-size: 1rem;
+        font-size: 0.6rem;
         margin-top: 5%;
     }
 }

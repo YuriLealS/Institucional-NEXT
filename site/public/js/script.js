@@ -49,3 +49,19 @@ window.addEventListener('load', () => {
 window.addEventListener('scroll', () => {
   checkFadeInElements(); // Verifica fade-in quando rola a página
 });
+
+ // Função para alterar a logo conforme o tamanho da tela
+ function verificarTamanhoTela() {
+  const logo = document.getElementById('logo');
+  if (window.innerWidth <= 500) {  // Considera telas menores que 768px como dispositivos móveis
+      logo.src = 'css/img/logo.png'; // Altere o caminho para sua logo pequena
+  } else {
+      logo.src = 'css/img/logo-escura.png'; // Altere o caminho para sua logo padrão
+  }
+}
+
+// Executar a função ao carregar a página
+verificarTamanhoTela();
+
+// Adicionar o evento de resize para que a logo mude quando o usuário redimensionar a janela
+window.addEventListener('resize', verificarTamanhoTela);

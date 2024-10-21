@@ -1,7 +1,7 @@
 :root {
     --azulescuro: #0D21A1;
     --azulmedio: #4D8EDE;
-    --azulclaro: #009de4;
+    --azulclaro: #0D21A1;
     --amareloescuro: #EEC643;
     --amareloclaro: #FFE45E;
     --transparent: transparent;
@@ -17,4 +17,5 @@
     --font-size-h3: 1.05rem;
     --fonte: "Lato", sans-serif;
     --fonte-titulo: "Arvo", serif;
+    --fonte-header:"Lato", sans-serif;
 }
