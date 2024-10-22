@@ -1,49 +1,5 @@
-/* mobile */
-
-@media screen and (max-width:500px){
-    .rodape {
-        background: var(--preto2);
-        margin-top: 5vh;
-        color: var(--branco);
-        bottom: 0;
-        left: 0;
-        padding: 2vh;
-    }
-    
-    .texto_rodape{
-        font-family: var(--fonte);
-        font-size: 3vw;
-        text-align: center;
-    }
-    
-    .contato{
-        margin-left: 1.5vw;
-        text-align: center;
-    }
-    
-    #contato{
-        font-weight: bold;
-        margin-top: 1vh;
-        margin-bottom: 1.5vh;
-        font-family: var(--fonte-titulo);
-    }
-    
-    .texto_rodape_index{
-        width: 100%;
-        text-align: center;
-        background-color: var(--preto2);
-        margin-top: 3vh;
-    }
-    
-    #email{
-        margin-bottom: 1vh;
-    }
-}
-
-/* Computador */
-
-@media screen and (min-width: 500px){
-
+/* Computador (maiores que 500px) */
+@media screen and (min-width: 500px) {
     .rodape {
         background: var(--preto2);
         margin-top: 5vh;
@@ -52,7 +8,7 @@
         padding: 1vw;
     }
 
-    .texto_rodape{
+    .texto_rodape {
         font-family: var(--fonte);
         font-size: var(--font-size-base);
         text-align: center;
@@ -61,7 +17,7 @@
         font-weight: 550;
     }
 
-    #contato{
+    #contato {
         font-weight: bold;
         font-size: var(--font-size-h1);
         text-align: center;
@@ -70,16 +26,16 @@
         font-family: var(--fonte-titulo);
     }
 
-    .texto_rodape_index{
+    .texto_rodape_index {
         text-align: center;
         margin-top: 3vh;
     }
 
-    #email{
+    #email {
         margin-bottom: 1vh;
     }
 
-    .social{
+    .social {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -87,15 +43,122 @@
         margin: 1% 0;
     }
 
-    .social-container{
+    .social-container {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         width: 15%;
     }
 
-    .icon-contato{
+    .icon-contato {
         width: 30px;
         cursor: pointer;
+    }
+}
+
+/* Tablets (máximo 768px e mínimo 500px) */
+@media screen and (max-width: 768px) and (min-width: 500px) {
+    .rodape {
+        padding: 2vw 5vw; 
+    }
+
+    .texto_rodape {
+        font-size: 1rem; 
+    }
+
+    #contato {
+        font-size: 1.5rem; 
+    }
+
+    .social-container {
+        width: 40%; 
+        justify-content: space-around; 
+    }
+
+    .icon-contato {
+        width: 40px; 
+    }
+}
+
+/* Smartphones (máximo 500px) */
+@media screen and (max-width: 500px) {
+    .rodape {
+        margin-top: 10%;
+        padding: 2vw 4vw; 
+        background-color: var(--preto2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .texto_rodape {
+        font-size: 0.9rem; 
+        color: var(--branco);
+        text-align: center;
+    }
+
+    #contato {
+        font-size: 1.2rem; 
+        color: var(--branco);
+        text-align: center;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 2% 0;
+        width: 100%;
+    }
+
+    .social-container {
+        width: 40%;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .icon-contato {
+        width: 25px;
+        margin: 2%;
+    }
+
+    #email {
+        margin-bottom: 0.5vh;
+    }
+}
+
+/* Telas menores que 320px, como alguns celulares antigos */
+@media screen and (max-width: 319px) {
+    .rodape {
+        padding: 2vw 3vw;
+        background-color: var(--preto2);
+    }
+
+    .texto_rodape {
+        font-size: 0.8rem;
+    }
+
+    #contato {
+        font-size: 1rem; 
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 2% 0;
+    }
+
+    .social-container {
+        width: 40%; 
+        justify-content: space-between; 
+    }
+
+    .icon-contato {
+        width: 20px;
     }
 }

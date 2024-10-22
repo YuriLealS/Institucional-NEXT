@@ -1,56 +1,4 @@
-/* mobile */
-
-@media screen and (max-width:500px){
-    .cabecalho{
-        top:0;
-        left: 0;
-        position: fixed;
-        width: 100%;
-    }
-    
-    .container_cabecalho {
-        display: flex;
-        flex-direction: row;
-        background: var(--azulclaro);
-        align-items: center;
-    }
-    .itens_cabecalho{
-        position: fixed;
-        left: 35%;
-        display: flex;
-        flex-direction: row;
-        width: 60%;
-        justify-content: space-evenly;
-    }
-    a {
-        color: currentColor;
-        text-decoration:none;
-    }
-    .logo_cabecalho{
-        margin: 1vh 1vh 1vh 2vh;
-        height:10vw;
-    }
-    .btn_cabecalho{
-        width: 20vw;
-        height: 10vw;
-        border-radius: 10vw;
-        background-color: var(--preto2);
-        color: var(--branco);
-        font-size: 1rem;
-        font-weight: bold;
-        border-color: var(--preto);
-        font-family: var(--letra);
-        text-align: center;
-        margin-right: 1vw;
-    }
-    .btn_cabecalho:hover{
-        background-color: var(--branco);
-        color: var(--preto2);
-        cursor: pointer;
-    }
-}
-
-/* Computador */
+/* Computador (maiores que 500px) */
 @media screen and (min-width: 500px) {
     .cabecalho {
         position: fixed;
@@ -58,7 +6,7 @@
         left: 0;
         width: 100%;
         background: var(--branco);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para o cabeçalho */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para o cabeçalho */
         z-index: 1000;
         opacity: 1; /* Começa visível */
         transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transição suave */
@@ -66,6 +14,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        padding: 1rem 0;
     }
 
     .cabecalho.hidden {
@@ -75,10 +24,11 @@
 
     .container_cabecalho {
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
         padding: 1vh 5vw;
-        width: 40%;
+        width: 50%;
     }
 
     .logo_cabecalho {
@@ -89,26 +39,28 @@
         display: flex;
         justify-content: space-evenly;
         flex: 1;
+        align-items: center;
     }
 
     .btn_cabecalho {
         font-weight: bold;
         padding: 0.4vw 1vw;
-        border-radius: 10px;
+        border-radius: 5px;
         background-color: var(--transparent);
         color: var(--preto2);
-        font-size: 1rem;
+        font-size: 1.1rem;
         border: 2px solid transparent;
         font-family: var(--letra);
         text-align: center;
         transition: background-color 0.3s, color 0.3s;
+        font-family: var(--fonte-header);
+        font-weight: 700;
     }
 
     .btn_cabecalho:hover {
-        background-color: var(--azulmedio);
+        background-color: var(--azulclaro);
         color: var(--branco);
         cursor: pointer;
-        border-color: var(--azulmedio);
     }
 
     a {
@@ -117,5 +69,79 @@
     }
 }
 
+/* Tablets (máximo 768px e mínimo 500px) */
+@media screen and (max-width: 768px) and (min-width: 500px) {
+    .container_cabecalho {
+        width: 70%; 
+        padding: 1vh 3vw; 
+    }
 
+    .logo_cabecalho {
+        height: 4vh; 
+    }
 
+    .itens_cabecalho {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn_cabecalho {
+        padding: 0.4vw 0.8vw;
+        font-size: 0.9rem;
+    }
+}
+
+/* Smartphones (máximo 500px) */
+@media screen and (max-width: 500px) {
+    .container_cabecalho {
+        width: 96%;
+        padding: 3% 2%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo_cabecalho {
+        height: 4vh; 
+    }
+
+    .itens_cabecalho {
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .btn_cabecalho {
+        padding: 0.4vw 0.6vw;
+        font-size: 0.8rem;
+        background-color: transparent;
+        border: 0;
+        color: var(--preto2);
+        font-weight: bold;
+    }
+}
+
+/* Telas menores que 320px, como alguns celulares antigos */
+@media screen and (max-width: 319px) {
+    .container_cabecalho {
+        width: 95%;
+        padding: 1vh 1vw;
+    }
+
+    .logo_cabecalho {
+        height: 3vh;
+    }
+
+    .itens_cabecalho {
+        flex-direction: row;
+        align-items: center; 
+    }
+
+    .btn_cabecalho {
+        padding: 0.4vw 0.4vw;
+        font-size: 0.7rem;
+    }
+}
