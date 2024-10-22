@@ -1,0 +1,43 @@
+/* Estilizar o bloco do Instagram */
+.instagram-embed {
+    position: fixed; /* Fixa no canto esquerdo */
+    top: 20%; /* Centraliza verticalmente */
+    left: 20px; /* Ajusta a distância do canto esquerdo */
+    height: 50%; /* Ajusta a altura do embed */
+    width: 350px; /* Ajusta a largura do embed */
+    border-radius: 10px 0 10px 10px; /* Arredonda os cantos */
+    z-index: 10; /* Garante que fique acima de outros conteúdos */
+    background-color: white; /* Adiciona um fundo branco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao redor do bloco */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o bloco */
+}
+
+/* Estilizar o botão de fechar */
+.close-btn {
+    position: absolute;
+    top: -8px;
+    right: -4px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 11; /* Garante que o botão fique acima do conteúdo */
+    font-size: 25px;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+.instagram-embed iframe {
+    height: 100%; /* Faz o vídeo ocupar 100% da altura do bloco */
+    width: 100%; /* Faz o vídeo ocupar 100% da largura do bloco */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
