@@ -66,7 +66,9 @@ verificarTamanhoTela();
 // Adicionar o evento de resize para que a logo mude quando o usuário redimensionar a janela
 window.addEventListener('resize', verificarTamanhoTela);
 
-// Função para esconder o bloco do Instagram
-document.getElementById('closeBtn').addEventListener('click', function() {
-    document.getElementById('instagramEmbed').style.display = 'none';
-});
+window.onload = function() {
+  // Função para esconder o bloco do Instagram
+  document.getElementById('closeBtn').addEventListener('click', function() {
+      document.getElementById('instagramEmbed').style.display = 'none';
+  });
+};

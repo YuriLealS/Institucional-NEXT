@@ -1,9 +1,5 @@
 /* Computador (maiores que 500px) */
 @media screen and (min-width: 500px) {
-    .main {
-        padding-top: 120px;
-    }
-
     .banner {
         position: relative;
         width: 100%;
@@ -21,6 +17,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.548);
     }
 
     .sobre{
@@ -191,18 +188,95 @@
 
 /* Smartphones entre 320px e 500px */
 @media screen and (max-width: 500px) {
-    .main {
-        padding-top: 15px;
+    .cabecalho{
+        display: none;
     }
 
-    .banner-container {
+    .main{
+        padding: 0;
+    }
+
+    .banner{
         width: 100%;
-        background-image: url(img/banner.png);
+        background-image: url(img/banner-celular.gif);
         background-position: center;
         background-size: cover;
         display: flex;
         flex-direction: row;
         justify-content: right;
+        height: 90vh;
+        align-items: center;
+    }
+
+    .banner-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+
+    .banner-sobre{
+        width: 100%;
+        background-image: url(img/banner2.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .btn-sobre{
+        background-color: transparent;
+        border: 0.1px solid #f9f9f948;
+        cursor: pointer;
+        margin: 10% 0 10% 0;
+        color: var(--branco);
+        font-size: var(--font-size-h1);
+        padding: 2%;
+        font-weight: bold;
+        font-family: var(--fonte);
+        border-radius: 5px;
+        font-size: 1.3rem;
+    }
+
+    .btn-sobre:hover{
+        background-color: rgba(255, 255, 255, 0.336);
+    }
+
+    .container-banner-sobre{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.548);
+        height: 100vh;
+    }
+
+    .sobre{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3% 0;
+    }
+
+    .texto-botao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo-sobre{
+        font-size: 1.3rem;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .texto-sobre{
+        font-size: 1rem;
+        width: 90%;
+        margin-bottom: 10px;
+        text-align: justify;
     }
 
     .topicos {
@@ -238,12 +312,10 @@
     }
 
     .fadeIn {
-        width: 40%;
-        font-size: 1.2rem;
-        margin: 5%;
+        margin: 0 5%;
         text-align: center;
         color: var(--branco);
-        font-size: 10px;
+        font-size: 1.3rem;
     }
 }
 
@@ -252,6 +324,13 @@
     
     .banner-container {
         width: 100%;
+    }
+
+    .banner-sobre{
+        width: 100%;
+        background-image: url(img/banner2.png);
+        background-position: center;
+        background-size: cover;
     }
 
     .card {
