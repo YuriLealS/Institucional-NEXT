@@ -90,3 +90,32 @@ h3{
     color: var(--preto2);
     font-weight: 550;
 }
+
+
+@media screen and (min-width: 500px) {
+    .main {
+        padding-top: 120px;
+    }
+    
+    h1{
+        font-size: var(--font-size-h1);
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 500px) {
+    .main {
+        padding-top: 100px;
+    }
+    h1{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        padding-top: 15px;
+    }
+    h1{
+        font-size: 1.2rem;
+    }
+}
