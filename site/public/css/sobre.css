@@ -5,7 +5,6 @@
     left: 5px;
     height: 50%;
     width: auto; /* Ajuste para telas menores */
-    max-width: 400px; /* Define um valor máximo de largura */
     border-radius: 10px;
     z-index: 10;
     background-color: transparent;
@@ -45,7 +44,7 @@
 }
 
 .sobre-container{
-    width: 40%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,15 +72,76 @@
 }
 
 /* Estilos responsivos para telas menores */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     .instagram-embed {
         top: 5%;
         left: 0;
         width: auto;
     }
+    .instagram-embed iframe {
+        height: 100%;
+        width: 100vw;
+    }
+    
+    .instagram-embed {
+        position: fixed;
+        height: 100%;
+        width: auto; /* Ajuste para telas menores */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        top: 0;
+        background-color: white;
+    }
+    
+    .cabecalho{
+        display: none;
+    }
+    
+    .sobre-container{
+        width: 70%;
+    }
+
+    .texto-sobre{
+        font-size: 1rem;
+    }
 }
 
-.instagram-embed iframe {
-    height: 100%;
-    width: 100%;
+/* Estilos para telas grandes (acima de 1024px) */
+@media screen and (min-width: 1025px) {
+    .sobre-container {
+        width: 40%; /* Manter o layout compacto em desktops */
+    }
+
+    .texto-sobre {
+        font-size: 1.1rem; /* Manter o tamanho da fonte maior */
+    }
+
+    .instagram-embed {
+        top: 20%;
+        left: 20px;
+        max-width: 800px; /* Aumenta a largura do bloco em telas grandes */
+    }
+
+    .instagram-embed iframe {
+        height: 100%;
+        width: 100%;
+    }
+    
 }
+
+@media screen and (min-width: 1960px ) {
+    .rodape{
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+    .texto-sobre{
+        font-size: 1.3rem;
+    }
+    .main{
+        padding-top: 10%;
+    }
+}
+
+
+
