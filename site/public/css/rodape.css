@@ -58,10 +58,6 @@
 
 /* Tablets (máximo 768px e mínimo 500px) */
 @media screen and (max-width: 768px) and (min-width: 500px) {
-    .rodape {
-        padding: 2vw 5vw; 
-    }
-
     .texto_rodape {
         font-size: 1rem; 
     }
@@ -133,7 +129,6 @@
 /* Telas menores que 320px, como alguns celulares antigos */
 @media screen and (max-width: 319px) {
     .rodape {
-        padding: 2vw 3vw;
         background-color: var(--preto2);
     }
 
