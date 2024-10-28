@@ -3,11 +3,11 @@
     .banner {
         position: relative;
         width: 100%;
-        background-image: url("img/banner.png");
+        background-image: url("img/banner2.png");
         background-size: cover;
         background-position: center;
         display: flex;
-        justify-content: right;
+        justify-content: left;
     }
 
     .banner-container {
@@ -41,9 +41,11 @@
 
     .banner-sobre{
         width: 100%;
-        background-image: url(img/banner2.png);
+        background-image: url(img/banner.png);
         background-position: center;
         background-size: cover;
+        display: flex;
+        justify-content: right;
     }
 
     .container-banner-sobre{
