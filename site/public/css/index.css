@@ -190,9 +190,6 @@
 
 /* Smartphones entre 320px e 500px */
 @media screen and (max-width: 500px) {
-    .cabecalho{
-        display: none;
-    }
 
     .main{
         padding: 0;
@@ -200,14 +197,15 @@
 
     .banner{
         width: 100%;
-        background-image: url(img/banner-celular.gif);
+        background-image: url(img/fundo.jpg);
         background-position: center;
         background-size: cover;
         display: flex;
         flex-direction: row;
         justify-content: right;
-        height: 90vh;
+        height: 400px;
         align-items: center;
+        margin-top: 5%;
     }
 
     .banner-container {
@@ -216,6 +214,7 @@
         align-items: center;
         justify-content: center;
         height: 100%;
+        background-color:rgba(0, 0, 0, 0.548) ;
     }
     
 
@@ -224,6 +223,7 @@
         background-image: url(img/banner2.png);
         background-position: center;
         background-size: cover;
+        height: 400px;
     }
 
     .btn-sobre{
@@ -251,7 +251,7 @@
         align-items: center;
         justify-content: center;
         background-color: rgba(0, 0, 0, 0.548);
-        height: 100vh;
+        height: 100%;
     }
 
     .sobre{
