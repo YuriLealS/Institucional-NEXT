@@ -190,11 +190,6 @@
 
 /* Smartphones entre 320px e 500px */
 @media screen and (max-width: 500px) {
-
-    .main{
-        padding: 0;
-    }
-
     .banner{
         width: 100%;
         background-image: url(img/fundo.jpg);

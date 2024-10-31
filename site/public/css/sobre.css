@@ -73,11 +73,13 @@
 
 /* Estilos responsivos para telas menores */
 @media screen and (max-width: 500px) {
-    .instagram-embed {
-        top: 5%;
-        left: 0;
-        width: auto;
+    .main{
+        padding-top: 80px;
     }
+    .instagram-embed {
+        display: none;
+    }
+
     .instagram-embed iframe {
         height: 100%;
         width: 100vw;
@@ -90,10 +92,6 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         top: 0;
         background-color: white;
-    }
-    
-    .cabecalho{
-        display: none;
     }
     
     .sobre-container{
