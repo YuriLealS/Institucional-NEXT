@@ -19,31 +19,24 @@ function checkFadeInElements() {
   });
 }
 
-// Função para ocultar ou mostrar o cabeçalho conforme o movimento do scroll
 function handleHeaderVisibility() {
-  let prevScrollPos = window.pageYOffset; // Posição anterior do scroll
-  const header = document.querySelector('.cabecalho'); // O elemento do cabeçalho
+  const header = document.querySelector('header'); // Substitua 'header' pela classe ou ID do seu cabeçalho
+  let lastScrollTop = 0;
 
-  window.onscroll = function() {
-      let currentScrollPos = window.pageYOffset; // Posição atual do scroll
-
-      if (prevScrollPos > currentScrollPos) {
-          // Rolou para cima
-          header.classList.remove('hidden');
-      } else {
-          // Rolou para baixo
-          header.classList.add('hidden');
-      }
-
-      // Atualiza a posição anterior do scroll
-      prevScrollPos = currentScrollPos;
-  };
+  window.addEventListener('scroll', () => {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll > lastScrollTop) {
+      header.style.top = "-100px"; // Esconde o cabeçalho ao rolar para baixo
+    } else {
+      header.style.top = "0"; // Mostra o cabeçalho ao rolar para cima
+    }
+    lastScrollTop = currentScroll;
+  });
 }
 
-// Executa a função ao carregar a página e ao rolar a página para verificar os elementos visíveis para o fade-in
 window.addEventListener('load', () => {
-  checkFadeInElements(); // Verifica fade-in ao carregar a página
-  handleHeaderVisibility(); // Configura o comportamento do cabeçalho no scroll
+  checkFadeInElements(); 
+  handleHeaderVisibility();
 });
 
 window.addEventListener('scroll', () => {

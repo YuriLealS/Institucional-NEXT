@@ -93,13 +93,23 @@
 
 /* Smartphones (máximo 500px) */
 @media screen and (max-width: 500px) {
+    .cabecalho{
+        position: fixed;
+        width: 100%;
+        background-color: #f9f9f9;
+        top: 0;
+        transition: top 0.3s ease; /* Transição suave ao esconder/mostrar */
+        z-index: 1000; /* Mantém o cabeçalho acima de outros elementos */
+    }
     .container_cabecalho {
+        font-family: var(--fonte-header);
         width: 96%;
         padding: 3% 2%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para o cabeçalho */
     }
 
     .logo_cabecalho {
@@ -126,8 +136,9 @@
 
 /* Telas menores que 320px, como alguns celulares antigos */
 @media screen and (max-width: 319px) {
+    
     .container_cabecalho {
-        width: 95%;
+        width: 100%;
         padding: 1vh 1vw;
     }
 
